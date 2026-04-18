@@ -1,6 +1,6 @@
 # Time-Embedded Annealed Flow Transport
 
-This repository contains the implementation of Time-Embedded Annealed Flow Transport algorithms developed as part of my Honours Project in March 2024.
+This repository contains the implementation of Time-Embedded Annealed Flow Transport algorithms developed as part of my undergraduate Honours Project in March 2024.
 
 The code adapts and extends the [Annealed Flow Transport repository](https://github.com/google-deepmind/annealed_flow_transport) from Google DeepMind, introducing novel time-embedded variants of flow-based sampling algorithms for Bayesian inference.
 
@@ -50,8 +50,8 @@ This project requires Python 3.8+ and the following core dependencies:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/stevyseah/fyp_differentiable_samplers.git
-   cd fyp_differentiable_samplers
+   git clone https://github.com/stevyseah/time-embedded-annealed-flow-transport.git
+   cd time-embedded-annealed-flow-transport
    ```
 
 2. **Create a virtual environment** (recommended):
@@ -241,34 +241,34 @@ python -m pytest tests/
 ```
 .
 ├── src/
-│   ├── main.py                          # Single experiment runner
-│   ├── experiment.py                    # Repeated experiments with logging
-│   ├── mle.py                          # MLE training for flows
-│   ├── time_embedding_example.py       # Time-embedding demonstration
+│   ├── main.py                                # Single experiment runner
+│   ├── experiment.py                          # Repeated experiments with logging
+│   ├── mle.py                                 # MLE training for flows
+│   ├── time_embedding_example.py              # Time-embedding demonstration
 │   └── annealed_flow_transport/
-│       ├── aft.py                      # AFT algorithm implementation
-│       ├── craft.py                    # CRAFT algorithm
-│       ├── adaptive_craft.py           # Adaptive CRAFT
-│       ├── smc.py                      # Sequential Monte Carlo
-│       ├── flows.py                    # Normalizing flow models
-│       ├── densities.py                # Target distributions
-│       ├── samplers.py                 # Initial samplers
-│       ├── train.py                    # Training orchestration
+│       ├── aft.py                             # AFT algorithm implementation
+│       ├── craft.py                           # CRAFT algorithm
+│       ├── adaptive_craft.py                  # Adaptive CRAFT
+│       ├── smc.py                             # Sequential Monte Carlo
+│       ├── flows.py                           # Normalizing flow models
+│       ├── densities.py                       # Target distributions
+│       ├── samplers.py                        # Initial samplers
+│       ├── train.py                           # Training orchestration
 │       └── utils/
-│           ├── smc_utils.py           # SMC utilities
-│           ├── hmc.py                 # HMC kernel
-│           └── aft_types.py           # Type definitions
-├── configs/                             # Experiment configurations
-│   ├── funnel/                         # Neal's funnel experiments
-│   ├── pines/                          # Log-Gaussian Cox Process
-│   └── special/                        # Special cases (two_moons, etc.)
-├── data/                               # Datasets
+│           ├── smc_utils.py                   # SMC utilities
+│           ├── hmc.py                         # HMC kernel
+│           └── aft_types.py                   # Type definitions
+├── configs/                                   # Experiment configurations
+│   ├── funnel/                                # Neal's funnel experiments
+│   ├── pines/                                 # Log-Gaussian Cox Process
+│   └── special/                               # Special cases (two_moons, etc.)
+├── data/                                      # Datasets
 │   ├── two_moons.csv
 │   └── finpines.csv
-├── results/                            # Experimental results (CSV)
-├── images/                             # Visualization outputs
-├── tests/                              # Unit tests
-├── differentiable_samplers.pdf         # Full thesis document
+├── results/                                   # Experimental results (CSV)
+├── images/                                    # Visualization outputs
+├── tests/                                     # Unit tests
+├── time-embedded-annealed-flow-transport.pdf  # Full thesis document
 └── README.md
 ```
 
@@ -287,4 +287,4 @@ This project is based on the Google DeepMind Annealed Flow Transport repository.
 
 ---
 
-**Note**: This repository contains the complete implementation used for the experiments reported in the thesis. The full thesis document (`differentiable_samplers.pdf`) is included in the root directory for reference.
+**Note**: This repository contains the complete implementation used for the experiments reported in the thesis. The full thesis document (`time-embedded-annealed-flow-transport.pdf`) is included in the root directory for reference.
